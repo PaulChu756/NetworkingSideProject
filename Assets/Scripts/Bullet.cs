@@ -3,10 +3,10 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour
 {
-    void onCollisonEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
-        GameObject hit = collision.gameObject;
-        Health health = hit.GetComponent<Health>();
+        var hit = collision.gameObject; // Gameobject
+        var health = hit.GetComponent<Health>(); // Health
 
         if (health != null)
         {
